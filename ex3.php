@@ -49,5 +49,10 @@ print_r("\n");
 
 print_r("Is it less or equal? ");
 var_export(5 <= -2);
+print_r("\n");
+
+print_r("Is it less or equal? ");
+print_r(var_export(5 <= -2) . ", as you see it");
+print_r("\n");
 
 print_r("\n");
