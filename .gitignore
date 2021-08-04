@@ -21,3 +21,9 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+#
+1.txt
+2.txt
+*_sample.txt
+test.txt
