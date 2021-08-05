@@ -29,3 +29,7 @@ $b = 13;
 print_r("a: $a, b: $b \n");
 swap($a, $b);
 print_r("a: $a, b: $b \n");
+
+function swap_($num1, $num2){
+    return [$num2, $num1];
+}

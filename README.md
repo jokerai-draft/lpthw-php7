@@ -10,3 +10,7 @@
 打印 https://stackoverflow.com/a/2638227
 判断和高级判断 (其它类型变量转换为布尔值) https://stackoverflow.com/questions/7336861/how-to-convert-string-to-boolean-php/15075609 # 提供了 "十六合一" 式的  scalability
 ```
+```
+字符串组合问题 ex6.php
+https://stackoverflow.com/a/5606037 string formatter and sprintf
+```
