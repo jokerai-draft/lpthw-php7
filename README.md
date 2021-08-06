@@ -14,3 +14,39 @@
 字符串组合问题 ex6.php
 https://stackoverflow.com/a/5606037 string formatter and sprintf
 ```
+
+
+错误的调试办法 (打印语句 debug)
+```
+echo (bool)false;
+print_r(false);
+echo (bool)(5 <= -2);
+print_r(5 <= -2);
+echo $a;
+print_r($not_there);
+```
+
+调试办法 (打印语句 debug)
+```
+<?php
+
+print_r(var_export(false, true) . "\n");  #=> false
+print_r(var_export((5 <= -2), true) . "\n");  #=> false
+print_r(var_export($not_there, true) . "\n"); #=> null
+print_r(var_export(true, true) . "\n"); #=> true
+
+$a = array_key_first([]);
+echo $a;
+print_r($a);
+print_r(var_export($a, true) . "\n");  #=> null
+
+$a = is_int([]);
+echo $a;
+print_r($a);
+print_r(var_export($a, true) . "\n");  #=> false
+
+$a = is_int(2);
+echo $a; #=> 1
+print_r($a); #=> 1
+print_r(var_export($a, true) . "\n");  #=> true
+```
