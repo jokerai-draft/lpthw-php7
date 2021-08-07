@@ -22,6 +22,7 @@ for ($i = 0; $i < $times; $i++) {
     $arr[] = "jo";
     // $arr[] = "jo{$i}";
 }
+unset($i);
 print_r(implode(" ", $arr));
 print_r("\n");
 

@@ -19,7 +19,7 @@ print_r(var_export(getBoolFromString('false'), true) . "\n"); # false
 print_r(var_export(getBoolFromString(' '), true) . "\n");
 
 function getBoolFromString($val){
-    if (!is_null($val) && is_string($val)){
+    if (!is_null($val) && is_string($val)){  // is_null 判断野指针
         if ($val === 'true') { return true; }
         if ($val === 'false') { return false; }
         if ($val !== 'true' && $val !== 'false') { return null; }

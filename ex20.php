@@ -14,8 +14,9 @@ function print_a_line($line_count, $handle){
     $i = 0;
     while ($i < $line_count){
         $line = fgets($handle);
-        $i++;
+        ++$i;
     }
+    unset($i);
     echo $line_count . ' ' . $line;
     rewind($handle);
 }

@@ -25,3 +25,11 @@ $ans2 = "The Republic of South Africa is in Africa";
 $line = "so the answer is: :ans";
 $strParams = [":ans" => $ans2];
 print_r(strtr($line, $strParams));
+
+
+// ...
+echo "\n";
+$joke_evaluation = "Isn't that joke so funny?! :isFunny.";
+$strParams = [":isFunny" => var_export($hilarious, true)];
+$processed = str_replace(':isFunny', "falsy", $joke_evaluation);
+print_r($processed . "\n");

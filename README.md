@@ -50,3 +50,22 @@ echo $a; #=> 1
 print_r($a); #=> 1
 print_r(var_export($a, true) . "\n");  #=> true
 ```
+
+在可能有野指针出现时，在进入 IF 语句之前，通过赋值 (变量默认值) 避免野指针
+而不是在 IF 语句里使用对野指针包容性极高的函数 比如 empty is_numeric
+```
+$a ??= "DEFAULT";  # 等号右边是默认值, 在可能有野指针出现时，避免了 null值做默认值的情况
+$num ??= -1;
+$bool ??= false;
+$res ??= [];
+
+$a = $a ?? "DEFAULT";
+print_r($a . "\n"); #=> DEFAULT
+
+$num = $num ?? -1;
+print_r($num . "\n"); #=> -1
+
+$bool = $bool ?? false;
+print_r(var_export($bool, true) . "\n");  #=> false
+
+```
