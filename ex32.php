@@ -47,3 +47,4 @@ unset($i);
 foreach ($elements as $ele) {
     print_r("Element was: $ele \n");
 }
+unset($ele);

@@ -38,3 +38,8 @@ print_r($days);
 
 // about unset , why unset makes a perfect for loop and foreach loop
 // https://stackoverflow.com/questions/47128069/why-do-i-need-unset-value-after-foreach-loop
+
+// print array: array to string
+
+$days = ["Monday", "Tuesday", "Awesomeday"];
+print_r("Now the days are: " . "[" . implode(", ", $days) . "]" . "\n");
