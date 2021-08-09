@@ -3,7 +3,7 @@
 比较 object 时
 
 possibly SAME INSTANCE objects
-比较对象的指针: 若指针一样则必然相等，若指针不一样
+比较对象的指针: 若指针一样则必然相等，若不方便比较指针是否一样 OR 只在乎对象的值是否一样 则 比较对象的值 比较对象的内容
 
 
 not SAME INSTANCE objects
