@@ -1,4 +1,5 @@
 <?php
+// 布尔练习
 // https://www.bookstack.cn/read/LearnPython3TheHardWay/spilt.33.learn-py3.md
 
 // php truthy and falsy
