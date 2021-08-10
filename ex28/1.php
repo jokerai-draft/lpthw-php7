@@ -45,6 +45,10 @@ print_r('$a = ' . $a . '; $b = ' . $b . ';' . "\n");
 // 即 echo bccomp('1.00001', '1'); // 0
 // https://www.php.net/manual/zh/function.bccomp.php bccomp 参数会字符串
 
+// float with abs
+
+// https://www.v2ex.com/t/164207?p=1#r_1736927
+// 不能直接比较浮点，要比较的话都是 abs(a-b)<某个精确度
 
 // string
 
@@ -75,3 +79,14 @@ cool
 
 print_r(var_export($para1 === $para2, true) . "\n");  #=> false
 print_r(var_export($para3 === $para2, true) . "\n");  #=> true
+
+
+
+/*
+说明
+
+隐式转换发生在 if, switch, (loose comparision) ... 这些地方都应该用 全等号 ===
+最好源数据的数据类型是确定的 固定的
+https://www.v2ex.com/t/398773?p=1#r_4862569
+
+不然就会出现 PHP 自动转换类型 debug

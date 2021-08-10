@@ -29,6 +29,9 @@ echo "\n";
 
 // https://www.php.net/manual/en/language.oop5.object-comparison.php
 
+function equal($a, $b){
+    return serialize($a) === serialize($b);
+}
 $a = new stdClass();
 $b = new stdClass();
 $pointer = $a;

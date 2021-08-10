@@ -20,6 +20,9 @@ PHP 内置
 
 // 2
 
+如果要求 strictness 那么 == 比较是失效的
+如果要求 strictness 那么 基于 serialize 的比较是失效的
+
 如果是 == 比较两个对象，那么那是没有 strictness 的
 
 this snippet outputs 'equal':
@@ -90,5 +93,4 @@ php check object equal - Google 搜索
 这在 == 比较的基础上，杜绝了隐式类型转换
 
 说明
-serialize 本身没有 strictness about the equality ，跟直接用 == 比较没啥区别
-
+serialize 本身没有 strictness about the equality ，跟直接用 == 比较没啥区别，都无法做到 strictness 方面的要求
