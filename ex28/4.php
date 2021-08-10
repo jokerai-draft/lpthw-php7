@@ -1,6 +1,8 @@
 <?php
 /*
 
+// 谈谈对象相等性的思考方向的问题：如何思考对象相等性
+
 不去探索 "基于引用的相等性判断"
 目前唯一指定基于引用的相等性判断 就是 === 全等判断
 
@@ -20,6 +22,10 @@ https://www.librebyte.net/en/programming/how-to-compare-objects-in-php/
 https://www.php.net/manual/en/language.oop5.object-comparison.php
 目前唯一指定基于引用的相等性判断 就是 === 全等判断
 其它不用探索
+
+// 3 仅去探索 基于内容的相等性判断
+
+没有 strictness about the equality https://github.com/eloquent/equality
 
 // 3 仅去探索 基于内容的相等性判断
 

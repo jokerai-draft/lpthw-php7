@@ -50,6 +50,10 @@ $a->didi = $c;
 $b->didi = $d;
 print_r(var_export(serialize($a) === serialize($b), true) . "... \n");  #=> false
 // 所以 基于内容的相等性判断 就而言， serialize 并不是一个好方案 ...
+// 参考 ex28/2x/23.php
+// 参考
+// 没有 strictness about the equality
+// https://github.com/eloquent/equality
 
 print_r(serialize($c->c) . "\n");
 print_r(serialize($d->c) . "\n");
