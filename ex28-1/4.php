@@ -4,7 +4,7 @@
 
 1 clone 当前对象 作为 复制品，使得 复制品 和 原对象，有基于内容的相等性
 
-2 比较两个对象是否相等
+2 比较两个对象是否相等 (对 object 递归判断所有属性 若有一个值不相等 就不相等)
 
 参考
 https://www.php.net/manual/zh/language.oop5.cloning.php

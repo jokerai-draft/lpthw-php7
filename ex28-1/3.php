@@ -1,10 +1,10 @@
 <?php
 /*
 
-要求比较两个变量是否相等(class, properties' type, properties's value)
+求比较两个变量是否相等(class, properties' type, properties's value)
 (不看 object 指向同一块内存，不看对象地址)
 (即使不指向同一个内存块, 也可以 内容相等)
-(惯例 1 关心内容 包括 properties' value, properties' type 2 equal 函数 3 若是动态语言 所谓的 strictness 杜绝隐式类型转换)
+(惯例 1 关心内容 包括 properties' value, properties' type 2 equal 函数 3 若是动态语言 所谓的 strictness 杜绝隐式类型转换 4 对 object 递归判断所有属性 若有一个值不相等 就不相等 )
 
 参考
 在C#中，如果需要对两个对象进行相等判断。不外乎两种情况，判断两者的值相等或者判断两者的引用地址相同。一般情况下，我们需要对值类型对象判断值相等（不清楚值类型和引用类型的可以自行百度），对引用类型对象判断指向地址相同
