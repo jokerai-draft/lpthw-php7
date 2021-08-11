@@ -69,3 +69,9 @@ $bool = $bool ?? false;
 print_r(var_export($bool, true) . "\n");  #=> false
 
 ```
+
+变量存在性
+https://segmentfault.com/a/1190000014126990 区分一个变量是未被设置还是被设置为 null
+```
+
+```

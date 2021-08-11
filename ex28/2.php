@@ -25,6 +25,9 @@ var_dump(array_key_first($e));
 var_dump(array_key_last($e));
 echo "\n";
 
+// array_diff
+// https://segmentfault.com/a/1190000010748235
+
 // object
 
 // https://www.php.net/manual/en/language.oop5.object-comparison.php

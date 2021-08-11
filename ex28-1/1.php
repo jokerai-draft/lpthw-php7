@@ -21,6 +21,10 @@
 // object 有内容，可以查看
                       值和数据类型(多线程环境之下的 值类型 引用类型)(单线程环境之下的 标量值标量类型 组合类型)
 
+// 当 object 的状态改变时候，它内容改变就是 有了新状态，即状态改变
+// 如何保持对当前状态的快照呢？ clone 快照出来的对象 内容相等
+// https://www.php.net/manual/zh/language.oop5.cloning.php
+
 // 4
 
 // object 的 equal 和 identical
