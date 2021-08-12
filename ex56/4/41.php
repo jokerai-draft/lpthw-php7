@@ -14,6 +14,9 @@ print_r(sprintf("%.6f", 3.100) . "\n"); // 3.100000
 
 // https://stackoverflow.com/questions/6278296/extract-a-single-unsigned-integer-from-a-string
 
+// 从字符串获取字符串
+// 正则
+
 $str = 'In My Cart : 11 12 items';
 preg_match_all('!\d+!', $str, $matches);
 print_r($matches);

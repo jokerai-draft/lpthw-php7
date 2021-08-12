@@ -22,14 +22,16 @@ PHP 内置
 
 对于标量类型的变量
 如果要求 strictness 那么 == 比较是失效的
-如果要求 strictness 那么 基于 serialize 的比较是失效的
 如果要求 strictness 那么 === 的比较是生效
+如果要求 strictness 那么 如果 serialize 能够体现变量类型，那么就是生效的；如果不能体现变量类型，或者在进入 serialize 之前 变量发生了变量类型污染 那么就是失效的，源头失效则判断结果失效 这个和 serialize 无关
+
+变量类型污染可以发生在任何一次赋值的时候
 
 // 31
 
 对于复合类型的变量
 如果要求 strictness 那么 == 比较是失效的
-如果要求 strictness 那么 基于 serialize 的比较是失效的
+如果要求 strictness 那么 那么 如果 serialize 能够体现 private 属性，那么就是生效的；如果只能 public 属性参与 那么 基于 serialize 的比较是失效的
 
 如果是 == 比较两个对象，那么那是没有 strictness 的
 
@@ -108,4 +110,11 @@ php check object equal - Google 搜索
 这在 == 比较的基础上，杜绝了隐式类型转换
 
 说明
-serialize 本身没有 strictness about the equality ，跟直接用 == 比较没啥区别，都无法做到 strictness 方面的要求
+~~serialize 本身没有 strictness about the equality ，跟直接用 == 比较没啥区别，都无法做到 strictness 方面的要求~~
+serialize 本身是可以记录数据类型的，但是 若在进入 serialize 之前 变量发生了变量类型污染，那么 serialize 结果也会被污染
+
+说明
+=== 无法判断的， serialize 也无法判断
+print_r(var_export(1.20 === 1.200, true) . "\n"); // true
+print_r(var_export(serialize(1.20) === serialize(1.200), true) . "\n"); // true
+这是浮点数判定、如何对 float 显式保护无效零位的问题。关于这一点，可以用 sprintf formatter 搞定浮点数位数并返回字符串
