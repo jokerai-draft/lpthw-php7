@@ -1,7 +1,7 @@
 <?php
 /*
 
-// 自定义 非标量值的相等
+// 自定义 非标量值的相等 (对于复合类型的变量)
 
 参考1 (它能返回什么)
 如果想要比较 基于引用的相等性判断 那么可能是设计问题 --- 大部分情况下 === 全等判断是满足要求的
@@ -28,4 +28,4 @@ php check if same object - Google 搜索
 这里聊过一次 php 如何通过实现自己的 一个 interface Comparable (返回 -1 0 1 就像 bccomp ) 来 比较对象
 https://stackoverflow.com/questions/17008622/is-there-a-equals-method-in-php-like-there-is-in-java
   这里用了 serialize 来实现 == 比较
-  serialize 方案的弱点是 并没有 专门计算**递归各项值**
+  serialize 方案的弱点是 并没有 用非隐式转换的方式 专门计算**递归各项值**

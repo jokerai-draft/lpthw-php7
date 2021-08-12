@@ -1,0 +1,31 @@
+
+可能的小小陷阱
+
+1 - 看似是很小的问题，其实是很大的问题
+
+11 字符串变成数字的通解
+注意
+动态语言特有的问题
+字符串可能有多种样子供 parse
+限定函数的参数类型，是好的；通解 (允许函数参数类型任意) 是不好的，追求通解是不好的 徒增难度的，不要接这方面的活儿 这是一个错误的问题 陷阱的问题 昂贵的问题
+https://stackoverflow.com/questions/8529656/how-do-i-convert-a-string-to-a-number-in-php
+https://stackoverflow.com/questions/38992017/php-how-to-distinguish-0-from-0-0
+说明
+动态语言
+参数类型
+动态语言特有的问题
+
+12 判断对象相等性的通解
+注意
+1 php 原始数据类型氛围 "标量类型" 和 "复合类型"
+2 对于复合类型，可以判断指针(是否指向同一块内存) 也可以判断内容(内容是否相等)
+3 在判断内容时，松散比较并不会因数据类型不同而判定为内容不相同，而是会启用隐式类型转换。这波及了 == 和 serialize 都是允许类型转换的
+4 在判断内容时，严格比较会先判定数据类型、再判定内容。这也叫作 strictness 。对于标量类型，实现 strictness 的办法是全等号和反射。对于复合类型，实现 strictness 的办法是反射 (对复合类型变量 用全等号是判断是否指向同一块内存，它不是内容判断)。
+5 在判断内容时，可考虑使用 strict comparison 的库 (通过反射 获得对象的各个属性的 type 和 value) https://github.com/eloquent/equality ，原理是 https://www.librebyte.net/en/programming/how-to-compare-objects-in-php/
+
+说明
+隐式转换
+动态语言 (参考 静态语言做法 https://www.jianshu.com/p/237681cf8e68 C#中的相等判断：判断指针 和 判断内容 equals )
+
+2 - 序列化恢复的问题
+如果序列化恢复是安然无恙的，为什么不直接通过序列化比较对象呢。这说明序列化无法保证对象相等性

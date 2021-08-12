@@ -60,7 +60,7 @@ print_r($str . "\n"); // 0
 $str = strval($z);
 print_r($str . "\n"); // 0
 
-新赋值法 可以解决 "0.0" 字符串的获取的问题
+赋值法 可以解决 "0.0" 字符串的获取的问题
 $str = $z === 0.0 ? "0.0" : "-1";   // 不转换了，直接新赋值
 print_r($str . "\n"); // 0.0
 
@@ -68,3 +68,9 @@ https://www.php.net/manual/en/function.strval.php#57559
 https://stackoverflow.com/questions/38992017/php-how-to-distinguish-0-from-0-0
 
 
+
+// 说明
+// 赋值法
+// $converted_res = $res === true ? 'true' : 'false';
+// $converted_res = $res ? 'true' : 'false';
+// https://stackoverflow.com/questions/2795177/how-to-convert-boolean-to-string/2795180 php strval false - Google 搜索

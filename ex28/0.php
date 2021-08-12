@@ -20,6 +20,14 @@ PHP 内置
 
 // 2
 
+对于标量类型的变量
+如果要求 strictness 那么 == 比较是失效的
+如果要求 strictness 那么 基于 serialize 的比较是失效的
+如果要求 strictness 那么 === 的比较是生效
+
+// 31
+
+对于复合类型的变量
 如果要求 strictness 那么 == 比较是失效的
 如果要求 strictness 那么 基于 serialize 的比较是失效的
 
@@ -41,7 +49,10 @@ if ($left == $right) {
 ```
 https://github.com/eloquent/equality
 
-// 3
+// 32
+
+对于复合类型的变量
+如果要求 strictness 那么 === 的比较是生效
 
 如果是 === 比较两个对象，那么是有 strictness 但是又多了 SAME INSTANCE 的附加
 // 底层是直接比较两个指针所指向的内存块是否为同一个
@@ -61,17 +72,21 @@ if ($left === $right) {
 }
 ```
 
-// 4
+// 33
 
+对于复合类型的变量
 现状是
 Unfortunately PHP does not have an inbuilt method
 to compare objects strictly without requiring that they be the same instance (same address).
+https://github.com/eloquent/equality
 
-// 5
+// 4
 
+对于复合类型的变量
 一种这样的要求，用于判断两个对象的相等性
 
-在此要求一个 equal 函数
+在此要求一个 equals 函数
+- 用于判断复合类型变量的相等性
 - 不判断对象的内存地址 (不关注 两个指针 是否指向同一块内存)
 - 判断对象的各个属性是否 数据类型相同
 - 判断对象的各个属性是否 数据值相等

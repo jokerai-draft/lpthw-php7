@@ -26,3 +26,17 @@ print_r(strtr($joke_evaluation, [":isFunny" => var_export($hilarious,true)]));
 $w = "This is the left side of...";
 $e = "a string with a right side.";
 print_r("{$w}{$e}");
+
+//
+
+echo "\n\n";
+
+// formatter sprintf
+
+$types_of_people = 10;
+$str = sprintf("There are %s types of people \n", $types_of_people);
+print_r($str);
+
+$hilarious = false;
+$str1 = sprintf("Isn't that joke so funny?! %s. \n", var_export($hilarious,true));
+print_r($str1);
