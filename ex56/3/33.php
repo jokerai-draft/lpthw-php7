@@ -3,6 +3,12 @@
 // 转义为字符串
 // (避免隐式转换)
 
+
+// float -> string ，办法一 (砍掉无效零位) 传入 float 本身，获得砍掉无效零位的字符串
+// float -> string ，办法二 (保留无效零位) 传入 float 本身 和 concise 小数点位数，获得保持指定位数的字符串
+
+// 办法二对 float 显式保护无效零位
+
 function test1(){
     $num = 0.00;
     $str = getStringFromDoubleF($num);
@@ -32,6 +38,9 @@ function getStringFromDouble($d){
         // print_r((string)3.100 . "\n"); // 3.1
         // print_r(sprintf("%.3f", 3.100) . "\n"); // 3.100
         // print_r(sprintf("%.6f", 3.100) . "\n"); // 3.100000
+// print_r(var_export(sprintf("%.2f", 12.01) === sprintf("%.5f", 12.01000), true) . "\n"); // false
+// print_r(var_export(sprintf("%.5f", 12.01000) === sprintf("%.5f", 12.01000), true) . "\n"); // true
+// print_r(var_export(sprintf("%.2f", 12.01) === sprintf("%.2f", 12.01000), true) . "\n"); // true
     } else {
         return "invalid double value";
     }
