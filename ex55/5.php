@@ -14,7 +14,7 @@
 // https://stackoverflow.com/questions/17008622/is-there-a-equals-method-in-php-like-there-is-in-java/17009105#17009105
 
 // * 说明
-// serialize 其实和 == 比较是一样的, 是 没比较 type 、只比较隐式转换之后的 value 的
+// serialize 其实和 == 比较是一样的, 是 没比较 type 、只比较隐式转换之后的 value 的: 对此, serialize 无法避免，也无法保护无效零位，因为它不是 serialize 造成的 (可以在数据进入 serialize 之前 用 sprintf formatter 保护无效零位)
 // 这是 关于判断对象相等性   serialize 方案的致命缺点 <--- 但这并不是 serialize 能避免的，这是参数传入 serialize 之前 就已经被(某处发生的隐式转换)污染了
 // serialize 本身缺点是 类变量 无法覆盖到 类变量
 
@@ -87,4 +87,4 @@ $e2 = new Flag(true, 12.00);
 // print_r(var_export(12.0 === 12.00, true) . "\n"); // true
 
 echo "Two instances of the same class\n";
-compareObjects($e1, $e2); // 这里会出问题 ... 因为浮点数比较 总是可能出现问题 ... 解决办法：办法一 让 "已经显式转换或隐式转换完成之后变量" 进入到 serialize ；办法二仍然保持变量的标量类型，转化为字符串再比较字符串
+compareObjects($e1, $e2); // 这里会出问题 ... 因为浮点数比较 总是可能出现问题 ... 解决办法: 办法一 让 "已经显式转换或隐式转换完成之后变量" 进入到 serialize ; 办法二仍然保持变量的标量类型，转化为字符串再比较字符串 参考 sprintf formatter

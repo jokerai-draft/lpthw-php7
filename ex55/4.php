@@ -76,9 +76,39 @@ $px = new DFlag(true, 0);
 
 echo "Two instances of the same class x \n";
 compareObjects($ox, $px);
-// 这说明 serial 可以覆盖到 private property 但是无法覆盖到 static property
+// 这说明 serialize 可以覆盖到 private property 但是无法覆盖到 static property
 // php serialize static properties - Google 搜索
 
+
+
+
+
+
+// serialize 的嫌疑1 ... 结果是： serialize 可以覆盖到 private property 但是无法覆盖到 static property ，在写 class 时可以考虑将类变量固化到实例变量里
+
+echo "\n\n";
+$cow1 = new DFlag();
+$cow2 = new DFlag();
+$cow3 = new DFlag();
+
+$fish1 = new DFlag();
+$fish2 = clone $fish1;
+
+echo "<<< static property \n";
+compareObjects($fish1, $fish2); // 全等
+
+$fish3 = unserialize(serialize($fish1));
+compareObjects($fish1, $fish3); // 全等
+
+print_r($fish1->j::$instances . "\n");
+print_r($fish3->j::$instances . "\n"); // 在打开 public 权限之后，二者相等
+
+
+
+
+
+
+// serialize 的嫌疑2 ... 结果是：触发数据类型隐式转换的 是 php 对 float "规则浮点数"化的处理，serialize 本身并没有触发数据类型隐式转换
 
 echo "\n\n\n 浮点数比较和隐式转换 !  \n ";
 // 没有 strictness about the equality
@@ -93,6 +123,6 @@ $e5 = new Flag(true, '12.000');
 
 echo "Two instances of the same class\n";
 // compareObjects($e1, $e2); // false
-compareObjects($e2, $e3); // true * 这个是 php 对 float 本身的处理之后(除非提前保护无效零位,在这里并无此意), float 都变成 规则浮点数了
+compareObjects($e2, $e3); // true * 这个是 php 对 float 本身的处理("规则浮点数"化的处理)之后(除非提前保护无效零位,在这里并无此意), float 都变成 规则浮点数了
 // compareObjects($e3, $e4); // false
 // compareObjects($e4, $e5); // false

@@ -32,6 +32,7 @@ class Comparator
     // function equals($left, $right){
     //     ...
     // }
+    // https://stackoverflow.com/questions/17008622/is-there-a-equals-method-in-php-like-there-is-in-java/17009105#17009105
 }
 
 // 情况描述选自

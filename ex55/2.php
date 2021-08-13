@@ -26,3 +26,5 @@ print_r(var_export( 12.01  ===  12.01000 , true) . "\n"); // true
 print_r(var_export(sprintf("%.2f", 12.01) === sprintf("%.5f", 12.01000), true) . "\n"); // false
 print_r(var_export(sprintf("%.5f", 12.01000) === sprintf("%.5f", 12.01000), true) . "\n"); // true
 print_r(var_export(sprintf("%.2f", 12.01) === sprintf("%.2f", 12.01000), true) . "\n"); // true
+
+// 这里的关注点是 %.5f 和 %.2f 得到的不同的字符串，是 sprintf formatter (它本身是 serialize 的上游了 和 serialize 无关)
