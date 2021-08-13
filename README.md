@@ -75,3 +75,11 @@ https://segmentfault.com/a/1190000014126990 区分一个变量是未被设置还
 ```
 
 ```
+
+float formatter
+float 是一个标量类型, 常用 sprintf formatter 得到某种格式 并得到某种格式的字符串, 可以视为保护无效零位的一种方式
+``` ex541/4.php
+// 要求前置几位零值
+$a = 1.23;
+$str = sprintf("%013.4f", $a); // 小数点前 八位, 小数点后 四位
+```

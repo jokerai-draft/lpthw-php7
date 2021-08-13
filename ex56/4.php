@@ -11,6 +11,6 @@
 // https://stackoverflow.com/questions/6278296/extract-a-single-unsigned-integer-from-a-string
 
 例如 格式过滤器
-sprintf , float formatter
+sprintf formatter , float formatter
 $r = sprintf("%.2f", $d);
 

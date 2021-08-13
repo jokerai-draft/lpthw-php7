@@ -30,3 +30,7 @@ print_r(gettype($str) . "\n");
 print_r($str . "\n");
 
 // 参考 php int to string prefix zero - Google 搜索
+
+
+// 评论区
+// float 是一个标量类型, 常用 sprintf formatter 得到某种格式 并得到某种格式的字符串, 可以视为保护无效零位的一种方式

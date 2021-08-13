@@ -6,4 +6,4 @@
 
 https://www.php.net/manual/zh/language.types.intro.php
 
-如果是 float 那么要考虑(float formatter)是否保护无效零位的问题
+如果是 float 那么要考虑(float formatter 比如 sprintf formatter)是否保护无效零位的问题
