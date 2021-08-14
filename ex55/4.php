@@ -63,7 +63,7 @@ class DDFlag
     private $dd;
     private static $instances = 0;
     private $instance;
-    public function __construct(){
+    public function __construct() {
         // $this->dd = new DateTime();
         $this->dd = new DateTime('2000-01-01');
         $this->instance = ++self::$instances;

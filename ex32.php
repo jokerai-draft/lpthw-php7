@@ -48,3 +48,6 @@ foreach ($elements as $ele) {
     print_r("Element was: $ele \n");
 }
 unset($ele);
+
+echo "\n";
+print_r("Elements: \n" . "[" . implode(", ", $elements) . "]" . "\n");

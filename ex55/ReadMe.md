@@ -21,3 +21,8 @@ serialize
 // 所谓到 object compare
 https://github.com/eloquent/equality
 https://www.librebyte.net/en/programming/how-to-compare-objects-in-php/
+
+
+作为一种数据保存的办法，后续可能的问题
+unserialize
+https://medium.com/swlh/diving-into-unserialize-3586c1ec97e
