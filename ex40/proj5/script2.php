@@ -12,7 +12,7 @@ echo "\n";
 echo Lib::getDate();
 
 echo "\n";
-echo Lib::getCallCount();
+echo Lib::getCallCounter();
 
 
 
@@ -20,7 +20,7 @@ echo Lib::getCallCount();
 // https://code.tutsplus.com/courses/php-fundamentals
 // https://code.tutsplus.com/courses/php-fundamentals/lessons/creating-a-dataprovider-class -- 这里已经单独脱离出一个 view 层了
 
-// https://code.tutsplus.com/courses/php-fundamentals/lessons/writing-a-data-abstraction-layer 明显用到了类方法
+// https://code.tutsplus.com/courses/php-fundamentals/lessons/writing-a-data-abstraction-layer 明显用到了静态类
 
 echo "\n";
 echo Lib::$version; // 类变量

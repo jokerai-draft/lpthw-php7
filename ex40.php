@@ -2,7 +2,7 @@
 
 class Song
 {
-    private $lyrics;
+    private array $lyrics = [];
     public function __construct($lyrics) {
         $this->lyrics = $lyrics;
     }
@@ -25,3 +25,7 @@ $bulls_on_parade = new Song(["They rally around tha family",
 
 $happy_bday->sing_me_a_song();
 $bulls_on_parade->sing_me_a_song();
+
+
+// 参考
+// https://stackoverflow.com/questions/59265625/why-i-am-suddenly-getting-a-typed-property-must-not-be-accessed-before-initiali

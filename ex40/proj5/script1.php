@@ -11,7 +11,7 @@ echo "\n";
 echo SlimLib::getDate();
 
 echo "\n";
-echo SlimLib::getCallCount();
+echo SlimLib::getCallCounter();
 
 
 

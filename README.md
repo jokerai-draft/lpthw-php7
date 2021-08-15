@@ -83,10 +83,16 @@ float 是一个标量类型, 常用 sprintf formatter 得到某种格式 并得�
 $a = 1.23;
 $str = sprintf("%013.4f", $a); // 小数点前 八位, 小数点后 四位
 ```
+``` ex58/env2/case32/script.php
+echo sprintf("We got %s rackets: \n", Racket::$counter);
+echo sprintf("%s tennis rackets \n", TennisRacket::$counter);
+echo sprintf("and %s table tennis rackets \n", TableTennisRacket::$counter);
+```
+
 
 type coercion, [strict type](https://stackoverflow.com/questions/48723637/what-do-strict-types-do-in-php)
 ```
-<?php
-declare(strict_types = 1);
+<?php declare(strict_types=1);
+// 注意分号
 ```
 [link](https://php.watch/versions/7.4/typed-properties)

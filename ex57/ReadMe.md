@@ -18,3 +18,11 @@ multiple constructor - Google 搜索
 new static()   new self()
 https://stackoverflow.com/questions/11710099/what-is-the-difference-between-selfbar-and-staticbar-in-php
 static 离实际干活儿的实例更近
+
+静态类
+https://www.php.net/manual/zh/language.oop5.static.php 无类的实例, 类变量也并不在实例之间共享 (https://www.php.net/manual/zh/language.oop5.cloning.php#在实例之间共享类变量静态变量)
+大量用到了静态类, 此时 如果没有 self 则无法写完静态类的第一个方法 也无法获得静态类数据
+https://code.tutsplus.com/courses/php-fundamentals/lessons/writing-a-data-abstraction-layer 明显用到了静态类
+静态类 静态方法 self::aStaticMethod() 静态属性 self::$version
+静态类消费者 静态方法 Lib::getCallCounter() 类变量 Lib::$version
+https://www.php.net/manual/zh/language.oop5.static.php
