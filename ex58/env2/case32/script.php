@@ -29,8 +29,8 @@ var_dump($p2);
 
 // echo "\n";
 
-$p3 = TennisRacket::fromBrand("Wilson");
-// $p3 = TennisRacket();
+// $p3 = TennisRacket::fromBrand("Wilson");
+$p3 = TennisRacket::create(); $p3->weight = "300g";
 $p4 = TennisRacket::fromType("Tweener");
 var_dump($p3);
 var_dump($p4);

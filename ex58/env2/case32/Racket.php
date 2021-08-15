@@ -30,6 +30,11 @@ class Racket
     public function __toString() {
         return "Racket ($this->type)";
     }
+
+    // just like called as parent::__construct(); https://www.php.net/manual/en/language.oop5.late-static-bindings.php#114005
+    public static function create() {
+        return new static("(default)", "(default)", "(default)", "(default)");
+    }
 }
 
 // [1]
