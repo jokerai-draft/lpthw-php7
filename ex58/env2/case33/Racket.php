@@ -9,7 +9,7 @@ class Racket
 
     public static $counter = 0; // 如果用 public static $counter = 0; 则有传染性
 
-    public function __construct($brand = "(default)", $colour="(default)", $type="(default)", $weight="(default)") {
+    protected function __construct($brand = "(default)", $colour="(default)", $type="(default)", $weight="(default)") {
         $this->colour = $colour;
         $this->weight = $weight;
         $this->type   = $type;

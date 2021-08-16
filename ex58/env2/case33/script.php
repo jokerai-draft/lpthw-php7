@@ -33,6 +33,8 @@ var_dump($p2);
 // $p3 = TennisRacket::create(); $p3->weight = "3000g"; // OK
 // $p3 = new TennisRacket(); $p3->weight = "300g"; // OK, use "new", and the actual __construct being public
 $p3 = new TableTennisRacket(); $p3->weight = "30g";
+// $p3 = new TennisRacket("(default tr brand)","(default tr colour)","grounded", "0g"); $p3->weight = "30g";
+// $p3 = new TennisRacket(); $p3->weight = "300g";
 $p4 = TennisRacket::fromType("Tweener");
 var_dump($p3);
 var_dump($p4);
