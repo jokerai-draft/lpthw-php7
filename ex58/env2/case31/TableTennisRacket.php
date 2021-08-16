@@ -9,7 +9,7 @@ class TableTennisRacket
 
     public static $counter = 0;
 
-    private function __construct($brand = "(default)", $colour="(default)", $type="(default)", $weight="(default)") {
+    public function __construct($brand = "(default)", $colour="(default)", $type="(default)", $weight="(default)") {
         $this->colour = $colour;
         $this->weight = $weight;
         $this->type   = $type;

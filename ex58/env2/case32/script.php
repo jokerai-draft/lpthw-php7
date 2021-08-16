@@ -29,8 +29,9 @@ var_dump($p2);
 
 // echo "\n";
 
-// $p3 = TennisRacket::fromBrand("Wilson");
-$p3 = TennisRacket::create(); $p3->weight = "300g";
+// $p3 = TennisRacket::fromBrand("Wilson"); // OK
+// $p3 = TennisRacket::create(); $p3->weight = "300g"; // OK
+$p3 = new TennisRacket(); $p3->weight = "300g"; // OK, use "new", and the actual __construct being public
 $p4 = TennisRacket::fromType("Tweener");
 var_dump($p3);
 var_dump($p4);
