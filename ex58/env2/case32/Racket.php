@@ -33,7 +33,7 @@ class Racket
 
     // just like called as parent::__construct(); https://www.php.net/manual/en/language.oop5.late-static-bindings.php#114005
     public static function create() {
-        return new static("(default)", "(default)", "(default)", "(default)");
+        return new static("(default)", "(default)", "(default)", "(default)"); // 会交给最底层 constructor 处理
     }
 }
 

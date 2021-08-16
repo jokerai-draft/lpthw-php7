@@ -7,6 +7,11 @@ class TennisRacket extends Racket
 {
     public static $counter = 0;
 
+    public function __construct($brand = "(default)", $colour="(default)", $type="(default)", $weight="(default)") {
+        parent::__construct($brand, $colour, $type, $weight);
+        $this->colour = "(default tennis racket colour)";
+    }
+
     public static function fromBrand($brand) {
         return parent::fromBrand($brand . " of TennisRacket");
     }
