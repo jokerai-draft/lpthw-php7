@@ -2,7 +2,13 @@
 
 abstract class TextReader
 {
+    abstract protected function readLine();
+    abstract protected function readToEnd();
 
+    public static $version = "0.0.1";
+    public static function create() {
+        return new static();
+    }
 }
 
 // 参考
