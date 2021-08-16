@@ -9,7 +9,7 @@ class Racket
 
     public static $counter = 0; // 如果用 public static $counter = 0; 则有传染性
 
-    protected function __construct($brand = "(default)", $colour="(default)", $type="(default)", $weight="(default)") {
+    public function __construct($brand = "(default)", $colour="(default)", $type="(default)", $weight="(default)") {
         $this->colour = $colour;
         $this->weight = $weight;
         $this->type   = $type;
@@ -33,7 +33,7 @@ class Racket
 
     // just like called as parent::__construct(); https://www.php.net/manual/en/language.oop5.late-static-bindings.php#114005
     public static function create() {
-        return new static("(default)", "(default)", "(default)", "(default)");
+        return new static("(default)", "(default)", "(default)", "(default)"); // 会交给最底层 constructor 处理
     }
 }
 

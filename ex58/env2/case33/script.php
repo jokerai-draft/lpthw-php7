@@ -24,12 +24,15 @@ echo TennisRacket::$counter;
 // echo $p2;
 
 var_dump($p1);
+echo "\n";
 var_dump($p2);
 
 // echo "\n";
 
-// $p3 = TennisRacket::fromBrand("Wilson");
-$p3 = TennisRacket::create(); $p3->weight = "300g";
+// $p3 = TennisRacket::fromBrand("Wilson"); // OK
+// $p3 = TennisRacket::create(); $p3->weight = "3000g"; // OK
+// $p3 = new TennisRacket(); $p3->weight = "300g"; // OK, use "new", and the actual __construct being public
+$p3 = new TableTennisRacket(); $p3->weight = "30g";
 $p4 = TennisRacket::fromType("Tweener");
 var_dump($p3);
 var_dump($p4);
