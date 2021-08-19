@@ -16,4 +16,6 @@
 
 
 说明
-对(从父类写到子类的)简单派生链, 对基准类(在此被看作潜在父类)函数体里, 将类的静态属性标记 self (self::$instances)是 OK 的 作为自我指代功能; 如果想 既有自我指代功能 同时为 late binding 留下空间, 那么可以用 static 替换 self  (static::$instances)
+对(从父类写到子类的)简单派生链, 对基准类(在此被看作潜在父类)函数体里, 将类的静态属性标记 self (self::$instances 或 self::filterName($name)[1] )是 OK 的 作为自我指代功能; 如果想 既有自我指代功能 同时为 late binding 留下空间, 那么可以用 static 替换 self  (static::$instances)
+
+[1](https://tutorials.supunkavinda.blog/php/oop-static-methods-properties)
