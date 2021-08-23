@@ -1,0 +1,50 @@
+
+== report 1 ==
+
+appendix/r103/2.php
+
+// 如何让一个载入页去从一个脚本里拿数据
+
+$age = 11;
+
+
+/*
+// 暂时用不到 autoload class
+// https://stackoverflow.com/a/2418744
+
+// 暂时用不到 state 管理
+方式一 component 统一管理单变量 $state 并接受服务 updateState  github.com/hecrj/iced#overview
+方式二 (自然路由) 到达载入页 由一个载入页管理自己的 state  // 之前的路由是 生成一个实例, 现在没有实例 类似 模板开发 类似 procedural+未分出view层
+方式三 mvc // 自己管理着好几个 view 通过判断 state 看激活谁; 通过路由参数 看激活到哪个controller@action
+  完全可以把 /index.php?route=post&action=create 美化成 /posts/create , 通过 htaccess PHP Simple Routing System https://youtu.be/6reEBParHzQ
+
+
+
+== report 1 - payload ==
+
+
+看它 encapsulation 做的不太好，打着灯笼都找不到 new object 在哪里
+
+看他们张嘴要的样子就看得蛋疼
+// 负面评价语句，一直给出的都是负面评价
+
+
+$o = new object();
+$o->render(); // 所有前置页内容都封在这里，然后自己进行状态管理
+路由可以是路由名 拿文件名当作路由名
+也可以是 index.php 里面决定启动哪个 class 的 $o 并注入状态、激发 $o->render();  有几组状态就是几个 $o
+ index.php?page=createpost 规则文件名
+ index.php?page=postedit&postid=3
+ index.php?page=postcreate
+ index.php?page=usersettings
+ index.php?page=login  用到服务 读取可登入名单并找到用户名密码匹配行
+ index.php?page=signup 用到服务 写入到可登入名单
+ POST index.php?page=postupdate 处理之后自动跳转
+ POST index.php?page=poststore 处理之后自动跳转 会先检查是否有登入了
+ index.php?page=posts
+
+自己弄了个设计模式，名叫 CRUD 模式
+
+
+
+我可以说 我对这个模式的了解为零，因为它没有可拓展性

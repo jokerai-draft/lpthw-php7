@@ -1,0 +1,7 @@
+
+7 Global Websites That Use PHP in 2021
+https://trio.dev/blog/companies-using-php
+
+五大语系
+golang java python node.js php 还有 dotnet core
+https://www.v2ex.com/t/796981?p=1#r_10806788

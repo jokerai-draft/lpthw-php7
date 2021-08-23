@@ -1,0 +1,4 @@
+
+改进: component 仅仅返回字符串结果, 然后 再包装一次 再返回 // 类似 "最外层的包装", 这一步可以由 route 来做 或者 退一步 可以由 routed-to-controller 来做
+ 改进后的 message <- controller <- component <- state -> component <- controller [1] <- route
+ 改进前的 route -> component as state holder -> state -> string <- service <- another service ✓

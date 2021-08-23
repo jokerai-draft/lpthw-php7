@@ -1,0 +1,9 @@
+
+这个模式的终点在哪里
+“评论区”
+评论区就比较难搞 https://learnku.com/articles/56754
+因为要取出 某个 model 相关的 (另一个 model 的所有条目) 外键诱发的集合
+
+完全可以作为一个 $state['comments'] 载入
+评论提交表 form 提交之后是交给 Comment@store 然后跳转回来 之前的网页 (302 跳转)
+

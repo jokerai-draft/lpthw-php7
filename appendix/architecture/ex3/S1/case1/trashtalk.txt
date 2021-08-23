@@ -1,0 +1,14 @@
+
+(关注的问题 我不拦着)
+
+php 感觉学 3 个月和 3 年没啥区别
+
+https://www.v2ex.com/t/653309?p=1#r_8696847
+
+
+我不拦着!
+
+golang stackoverflow 开发者调查, 如果要在世界范围内找工作 全押型 golang 开发者是找不到工作的 (php 可以)
+https://insights.stackoverflow.com/survey/2020#technology
+
+golang vs php (如果说 php 是 specific platform for doing sthg 那么 golang 只能更是)(C# 反而不是 specific platform , 但 C# ASP .NET 或 C# WPF 却是 。 WPF 可以养一票人 养一票的 LOB developer , golang 却开不出职位来 )

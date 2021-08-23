@@ -1,0 +1,12 @@
+
+万维网文档的传输
+
+https://www.bilibili.com/video/BV1c4411d7jb?p=73&t=8m30s 两个应用进程基于网络的通信, socket 是同一台主机内应用层与运输层之间的接口 https://jzwdsb.github.io/2018/03/application_level/
+
+HTTP 响应报文格式
+
+https://www.bilibili.com/video/BV1c4411d7jb?p=73&t=8m30s 响应报文是 如何让浏览器显式 404 的
+
+* cookie 工作原理
+
+https://www.bilibili.com/video/BV1c4411d7jb?p=73&t=16m20s

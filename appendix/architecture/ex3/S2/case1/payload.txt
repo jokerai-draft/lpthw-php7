@@ -1,0 +1,7 @@
+
+看这个怎么弄 MysqlAdapter 作为数据库连接器 (难道是 ... 最后抽象出来的接口 只接受一个参数: [表名, 列名, 列内容] 或 [表名, 条目内容] )
+
+https://www.v2ex.com/t/543746#通过实现依赖注入和路由，构建一个自己的现代化 PHP 框架
+
+非常像 service 的写法, data provider 什么的
+https://code.tutsplus.com/courses/php-fundamentals/lessons/creating-a-dataprovider-class

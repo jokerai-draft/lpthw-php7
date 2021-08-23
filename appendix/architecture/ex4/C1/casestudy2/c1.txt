@@ -1,0 +1,19 @@
+
+为什么说 controller 和 route 是 很外面的层, 并没有接触到业务
+
+https://www.cnblogs.com/oxgen/p/7171165.html
+php speed level 1 的问题在于 它把业务和视图挤压在一起了, 视图就是业务逻辑 业务逻辑就是展示视图. 最后写出来的东西 也就 html 能用 作为 view() 的 callee ; 而此时view()本身还是判断state之后的决定call谁才call谁 ; state 的判断和更新 是业务 但是 可以交给 service 去处理
+// 最终是在一个对象 (state's component) 里完成最新数据获取 然后 render view
+
+结果是 直接在这里 render
+缺点是 直接在这里 render 而非返回 Response 实例 // PSR-7 HTTP 消息接口规范 php fig Psr\Http\Message\ResponseInterface
+
+改进: component 仅仅返回字符串结果, 然后 再包装一次 再返回 // 类似 "最外层的包装", 这一步可以由 route 来做 或者 退一步 可以由 routed-to-controller 来做
+ 改进后的 message <- controller <- component <- state -> component <- controller [1] <- route
+ 改进前的 route -> component as state holder -> state -> string <- service <- another service
+
+[1] 这里 controller as HTTP 请求报文格式 and HTTP 响应报文格式 解析器/组装器
+                   一般是 Java servlet 做的 参考 Servlet版“Hello world“ https://www.zhihu.com/question/379662619
+                                                  （Servlet）其实在充当Controller https://www.zhihu.com/question/337682003
+                                                  php 是把 servlet 的 request 对象、response 对象、cookie 都做到语言里去了
+

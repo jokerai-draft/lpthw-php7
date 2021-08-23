@@ -1,0 +1,14 @@
+
+过滤输入
+用一个静态类方法方法来过滤输入，可以用在 form 和 url 防止 XSS 攻击
+
+url 美化
+新式
+ /posts/create => index.php?model=posts&action=create
+ /posts/store => index.php?model=posts&action=store (POST method)
+ /posts/12 => index.php?model=posts&action=show&id=12
+ index.php?modeslug=posts&action=edit&id=3
+ /posts/edit/3
+老式
+ index.php?page=postedit&postid=3
+ /postedit/3

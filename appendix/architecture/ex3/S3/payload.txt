@@ -1,0 +1,4 @@
+
+最后就是 ORM
+
+https://www.v2ex.com/t/543746#作出一个 ORM 来
