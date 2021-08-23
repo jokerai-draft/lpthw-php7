@@ -29,6 +29,7 @@ array_walk($output, function($v, $k) { echo $v; });
 echo "\n";
 // 打印合并结果
 array_map(function($item) { echo $item; }, $output);
+// array_map(fn($item) => { echo $item; }, $output); # 无法做到简写(解释器报错), 只能用标准 closure 闭包作为 callback
 
 // 参考
 // 键头函数

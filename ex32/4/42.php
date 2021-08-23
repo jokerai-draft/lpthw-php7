@@ -50,7 +50,7 @@ print_r($months);
 // 处理各项
 // (关注的是获得处理结果，而非原值是否改变)
 // "处理" 最舒服的办法自然是函数式（比如 array_map, array_filter ）， cost 是因匿名函数所以比较慢 ，如果是 字符串函数名 就会比较快
-// php array_walk vs array_map(函数式) vs foreach
+// php array_walk(foreach的变体) vs array_map(函数式) vs foreach
 
 echo "\n\n";
 
@@ -58,6 +58,14 @@ $Ddays = array_map(fn($item) => 'Cloudy ' . $item, $days);
 
 print_r($days); // 不改变原值
 print_r($Ddays);
+
+$uppercaseDdays = array_map('strtoupper', $Ddays);
+print_r('$uppercaseDdays: ' . "\n");
+print_r($uppercaseDdays);
+/* 参考 数组全员变大写单词 array_map(函数式) https://segmentfault.com/a/1190000040084826 */
+$uppercasedaysWhileRaining = array_map(fn($item) => strtoupper('While Raining ' . $item), $days);
+print_r('$uppercasedaysWhileRaining: ' . "\n");
+print_r($uppercasedaysWhileRaining);
 
 // 参考
 // https://stackoverflow.com/questions/47128069/why-do-i-need-unset-value-after-foreach-loop
