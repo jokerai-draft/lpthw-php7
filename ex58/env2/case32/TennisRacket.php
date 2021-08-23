@@ -4,8 +4,8 @@ class TennisRacket extends Racket
 {
     public static $counter = 0;
 
-    public static function fromBrand($brand) {
-        return parent::fromBrand($brand . " of TennisRacket");
+    public static function createFromBrand($brand) {
+        return parent::createFromBrand($brand . " of TennisRacket");
     }
 
     public function __toString() {

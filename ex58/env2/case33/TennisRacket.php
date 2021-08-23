@@ -9,8 +9,8 @@ class TennisRacket extends Racket
         parent::__construct($brand, $colour, $type, $weight);
     }
 
-    public static function fromBrand($brand) {
-        return parent::fromBrand($brand . " of TennisRacket");
+    public static function createFromBrand($brand) {
+        return parent::createFromBrand($brand . " of TennisRacket");
     }
 
     public function __toString() {

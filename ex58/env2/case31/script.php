@@ -3,8 +3,8 @@
 if (!defined('__ROOT__')) { define('__ROOT__', dirname(__FILE__)); }
 require_once(__ROOT__.'/TableTennisRacket.php');
 
-$p1 = TableTennisRacket::fromBrand("ShuangXi");
-$p2 = TableTennisRacket::fromType("flared"); // flared or penhold
+$p1 = TableTennisRacket::createFromBrand("ShuangXi");
+$p2 = TableTennisRacket::createFromType("flared"); // flared or penhold
 
 echo $p1;
 echo "\n";

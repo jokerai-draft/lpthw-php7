@@ -5,14 +5,14 @@ require_once(__ROOT__.'/Racket.php');
 require_once(__ROOT__.'/TableTennisRacket.php');
 require_once(__ROOT__.'/TennisRacket.php');
 
-$p1 = TennisRacket::fromBrand("Yonex");
+$p1 = TennisRacket::createFromBrand("Yonex");
 
 echo Racket::$counter;
 echo TableTennisRacket::$counter;
 echo TennisRacket::$counter;
 
 
-$p2 = TableTennisRacket::fromType("flared"); // flared or penhold
+$p2 = TableTennisRacket::createFromType("flared"); // flared or penhold
 
 echo Racket::$counter;
 echo TableTennisRacket::$counter;
@@ -29,13 +29,13 @@ var_dump($p2);
 
 // echo "\n";
 
-// $p3 = TennisRacket::fromBrand("Wilson"); // OK
+// $p3 = TennisRacket::createFromBrand("Wilson"); // OK
 // $p3 = TennisRacket::create(); $p3->weight = "3000g"; // OK
 // $p3 = new TennisRacket(); $p3->weight = "300g"; // OK, use "new", and the actual __construct being public
 $p3 = new TableTennisRacket(); $p3->weight = "30g";
 // $p3 = new TennisRacket("(default tr brand)","(default tr colour)","grounded", "0g"); $p3->weight = "30g";
 // $p3 = new TennisRacket(); $p3->weight = "300g";
-$p4 = TennisRacket::fromType("Tweener");
+$p4 = TennisRacket::createFromType("Tweener");
 var_dump($p3);
 var_dump($p4);
 

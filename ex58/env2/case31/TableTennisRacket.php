@@ -19,11 +19,11 @@ class TableTennisRacket
         // ++self::$counter;   // 总数 (记录各个子类包括本类的 总数)      // <-- 如果自视为 可能是父类, 且提前准备(有意识到)给 late static binding 留下空间
     }
 
-    public static function fromBrand($brand) {
+    public static function createFromBrand($brand) {
         return new static($brand, "(default)", "(default)", "(default)");
     }
 
-    public static function fromType($type) {
+    public static function createFromType($type) {
         return new static("(default)", "(default)", $type, "(default)");
     }
 
@@ -37,3 +37,10 @@ class TableTennisRacket
 
 // 这里用了 late binding 的语法, 虽然没体现效果, 但是值得的
 // https://stackoverflow.com/questions/20886911/php-self-vs-parent-with-extends#comment31347314_20887205
+
+/*
+multiple constructor 命名法参考
+DataTime::createFromFormat($format, $string)
+https://www.php.net/manual/zh/datetime.formats.php
+https://stackoverflow.com/questions/30200939/why-does-datetimecreatefromformat-fails-and-returns-a-boolean-in-my-second-e
+*/

@@ -19,11 +19,11 @@ class Racket
         ++self::$counter;   // 总数 (记录各个子类包括本类的 总数)
     }
 
-    public static function fromBrand($brand) {
+    public static function createFromBrand($brand) {
         return new static($brand, "(default)", "(default)", "(default)");
     }
 
-    public static function fromType($type) {
+    public static function createFromType($type) {
         return new static("(default)", "(default)", $type, "(default)"); // 这里一定要用 static 否则实例类型错误 [1]
     }
 
