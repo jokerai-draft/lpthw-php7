@@ -11,7 +11,9 @@
 #
 
 大量的 foreach 函数式缩写处理 indexed array , 在这里 ex32/4 推荐了解 array_map(函数式) 和 搜索功能函数(查找条目功能)
-
+这里有一份说明 说明了可达到同样结果的查找手段们 推荐哪个, 推荐的理由
+https://stackoverflow.com/questions/2473989/list-of-big-o-for-php-functions/2484455#2484455
+https://segmentfault.com/a/1190000040084826
 
 #
 what can php do?
