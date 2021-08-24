@@ -13,6 +13,9 @@
 大量的 foreach 函数式缩写处理 indexed array , 在这里 ex32/4 推荐了解 array_map(函数式) 和 搜索功能函数(查找条目功能)
 
 
+#
+what can php do?
+appendix/architecture/ex3/S1/case1
 
 ####
 一次备份

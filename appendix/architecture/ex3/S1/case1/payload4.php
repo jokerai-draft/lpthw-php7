@@ -4,6 +4,7 @@ PHP脚本解释执行的机制
 // 要不要使用 php_opcache() 函数
 
 https://zhuanlan.zhihu.com/p/75869838
+https://segmentfault.com/a/1190000040084826 简述 OpCache 的原理
 
 基于 HTTP 请求报文格式 and HTTP 响应报文格式
 
