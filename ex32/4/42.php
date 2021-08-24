@@ -62,7 +62,7 @@ print_r($Ddays);
 $uppercaseDdays = array_map('strtoupper', $Ddays);
 print_r('$uppercaseDdays: ' . "\n");
 print_r($uppercaseDdays);
-/* 参考 数组全员变大写单词 array_map(函数式) https://segmentfault.com/a/1190000040084826 */
+
 $uppercasedaysWhileRaining = array_map(fn($item) => strtoupper('While Raining ' . $item), $days);
 print_r('$uppercasedaysWhileRaining: ' . "\n");
 print_r($uppercasedaysWhileRaining);
