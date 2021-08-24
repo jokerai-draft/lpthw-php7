@@ -11,6 +11,7 @@ $a = 0;
 $b = 0.0;
 print_r(var_export(strcmp((string)$a, (string)$b) === 0, true) . "\n"); // true
 
+// 说明: 即使启用 <?php declare(strict_types=1); 也是依然结果
 
 答案二
 strcmp
