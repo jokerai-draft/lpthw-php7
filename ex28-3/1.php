@@ -16,5 +16,5 @@ print_r(var_export(is_null($a), true) . "\n");  // true
 test2();
 
 # https://stackoverflow.com/questions/12375833/isset-vs-empty-vs-is-null/45389115#45389115
-
+# https://phppot.com/php/isset-vs-empty-vs-is_null
 
