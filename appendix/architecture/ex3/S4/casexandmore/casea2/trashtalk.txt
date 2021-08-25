@@ -1,0 +1,34 @@
+
+phalcon 框架
+    PHP7 + Phalcon MVC
+    消息队列 beanstalkd
+    数据库 mysql + mongodb + elasticsearch + redis
+    部署：直接一个 git pull （ php 根本就不需要 build 系统）
+    服务器：centos8
+    软件版本保持在新的稳定版
+
+https://www.v2ex.com/t/797826 [远程][全国]全职 前端开发 - Angular
+
+QueryPHP 框架
+我为我的框架写了75000行代码，当然包涵注释空行，当你作为一个框架设计者来说，尝试为了框架实现百分之覆盖的时候，为什么 Laravel框架有这样一个函数，很多的时候你可能很少用得到。对于现有代码量来说，很少有精通 Laravel的说自己完全掌握细节，除非你是作者。Laravel 核心就是Ioc和服务提供者和定义了庞大的接口 契约，laravel 专门抽出一个包管理，结合容器替换核心
+QueryPHP
+https://www.zhihu.com/question/304010722 开发 laravel 的团队水平如何 由于 Laravel 包不够干净基本不考虑
+
+Laravel 核心单元测试覆盖不足，Laravel 的功能非常多，每一个版本都很新功能被添加，如果你看过 Symfony ,cakephp,Yii2 重型单元测试，根据 Laravel 核心包代码量和其3700多测试用例，9000断言，其中cakephp10000单元测试28000断言，yii2 5200例测试24000断言，Symfony重得不能再重了
+https://www.zhihu.com/question/304010722/answer/541524390
+
+
+
+常驻内存问题
+web app C/S 架构的常驻内存问题
+
+典型的 rails 服务器的构成都是这样一种模型： Nginx(web server) ----> Passenger/unicorn/puma 等 (app server) -----> rails(App)
+https://ruby-china.org/topics/29720
+这里的 app server 等于是 nginx转发给index.php的部分
+
+现在你了解了Web服务器和WEb框架支持的WSGI允许你选择一对儿合适的（服务器和框架），它对服务器和框架的开发者也有益，因为他们可以专注于他们特定的领域，而不是越俎代庖。其他语言也有相似的接口：例如，Java有Servlet API，Ruby有Rack *(web service interface)
+https://www.cnblogs.com/liuyang92/p/7513130.html
+https://www.rubyguides.com/2018/09/rack-middleware/
+https://en.wikipedia.org/wiki/Rack_(web_server_interface)
+https://devcenter.heroku.com/articles/ruby-default-web-server # Rack use WEBrick as a default development web server
+  参考 https://segmentfault.com/a/1190000040574550 类型系统设计师 是如何对 封装师 给予帮助的

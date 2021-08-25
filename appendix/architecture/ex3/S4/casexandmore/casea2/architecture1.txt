@@ -1,0 +1,26 @@
+
+python 有接口
+ WSGI : Python Web 服务器网关接口, 所有 web framework 都要和 WSGI 接口对接
+
+参考 python 自己造一个服务器
+https://www.cnblogs.com/liuyang92/p/7513130.html
+
+
+
+
+
+
+
+
+
+
+
+
+(类似于 自己造一个 rack + WEBrick )
+
+现在你了解了Web服务器和WEb框架支持的WSGI允许你选择一对儿合适的（服务器和框架），它对服务器和框架的开发者也有益，因为他们可以专注于他们特定的领域，而不是越俎代庖。其他语言也有相似的接口：例如，Java有Servlet API，Ruby有Rack *(web service interface)
+https://www.cnblogs.com/liuyang92/p/7513130.html
+https://www.rubyguides.com/2018/09/rack-middleware/
+https://en.wikipedia.org/wiki/Rack_(web_server_interface)
+https://devcenter.heroku.com/articles/ruby-default-web-server # Rack use WEBrick as a default development web server
+

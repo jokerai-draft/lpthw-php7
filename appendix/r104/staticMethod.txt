@@ -1,0 +1,54 @@
+
+静态方法
+
+调用静态方法(不需要实例化)
+定义静态方法
+https://www.cnblogs.com/shenliang123/archive/2011/10/27/2226923.html#java静态方法: 不创建对象直接调用静态方法
+典型用法
+java Math.random()
+int i=(int)(Math.random()*100); //  生成0-100的随机数
+C# 里并没有用静态方法来完成随机数获取 而是 Random rand1 = new Random((int) DateTime.Now.Ticks & 0x0000FFFF);
+
+特点概述
+
+静态有一些特点：
+
+1.全局唯一，任何一次的修改都是全局性的影响
+
+2.只加载一次，优先于非静态
+
+3.使用方式上不依赖于实例对象。
+
+4.生命周期属于类级别，从JVM 加载开始到JVM卸载结束
+
+https://www.cnblogs.com/muffe/p/6580208.html
+这里的静态，指以static关键字修饰的，包括类，方法，块，字段
+
+特点详述
+
+从内存的角度
+不能确定最新状态是哪个
+所有东西都可以修改它 所以如果想只读它 必须让它自己更新状态
+
+从状态管理的角度
+可以多方面共享状态
+不必生成实例 也不用每一个实例保有自己的状态
+(测试: 是否真的能共享状态? 更大的 scope 是什么? )
+
+从 OOP 的角度
+封装 encapsulation :  data is encapsulated in object 不再存在了, 现在是 data is encapsulated in global instance (从这个角度 对单例模式的调用 和 对静态物体(statics)的调用 一样的)
+争议: get the impression your supervisor expects you to be writing "good object oriented code" and you're really wanting to write "good procedural code"
+
+从生命周期的角度
+statics have a lifetime that matches the entire runtime of the program
+
+从单例模式的角度
+这里明确给出了 期待用单例模式替代 statics (单例模式 一个类的实例永远自我保持自己的状态 在各个地方都是这个状态 vs 一个类 只有静变量 只有静态类)
+
+从过程数据的有效性的角度
+statics 数据变化有积累效应, 最好在 "最上层" 使用. 下层提供的数据是没意义的过程数据, 其数据切片都是过期数据
+
+参考
+https://stackoverflow.com/questions/7026507/why-are-static-variables-considered-evil
+https://www.codenong.com/7026507/
+
