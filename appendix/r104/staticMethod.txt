@@ -52,3 +52,5 @@ statics 数据变化有积累效应, 最好在 "最上层" 使用. 下层提供�
 https://stackoverflow.com/questions/7026507/why-are-static-variables-considered-evil
 https://www.codenong.com/7026507/
 
++测试办法 如何测试静态变量是"不需要发生实例化也可以使用"的
+https://zhuanlan.zhihu.com/p/331605574
