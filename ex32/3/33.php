@@ -25,3 +25,6 @@ function deleteById($id, &$contacts) {
 print_r($contacts);
 
 // v2ex.com/t/774968?p=1#r_10497058 神奇的 Javascript，谁能告诉我为什么
+
+# 注意 对于数组, array_walk 无法删除元素 (unset with key)。如果想删除数组元组, 那么用 foreach 按 $v 找到元素并 按 $k unset
+
