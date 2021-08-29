@@ -2,6 +2,9 @@
 
 // 一种全新的数据结构
 
+// two dimensional array
+// https://stackoverflow.com/questions/1811100/how-do-i-declare-a-two-dimensional-array/1811121#1811121
+
 $id = 3;
 
 $contacts = [

@@ -14,6 +14,12 @@
 可参考 ex32/4/array_map.md
 
 #
+
+two dimensional array 可以读写 records 每个 record 可以自己有一个 int 类型的 'id' 字段而不用依赖 array index $k
+删除 record 时候 unset($arr[$k]) 就可以
+可参考 ex32/3/33.php
+
+#
 what can php do?
 appendix/architecture/ex3/S1/case1
 
