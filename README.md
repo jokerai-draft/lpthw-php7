@@ -73,7 +73,7 @@ print_r(var_export($bool, true) . "\n");  #=> false
 变量存在性
 https://segmentfault.com/a/1190000014126990 区分一个变量是未被设置还是被设置为 null 
 
-https://cloud.tencent.com/developer/news/657840 PHP 判断数 组key 是否存在, 你用 isset , 他用 array_key_exists , 这关乎 你是否打算让计算机将 v为null 的 kv对 识别为 `key 不合法(不合法的定义是什么)`
+https://cloud.tencent.com/developer/news/657840 PHP 判断数 组key 是否存在, 你用 isset , 他用 array_key_exists , 这关乎 你是否打算让计算机将 v为null 的 kv对 识别为 `key 不合法(不合法的定义是什么) (继而将它设置为合法值(null是当前可以接受的合法值吗)-不合法的定义是什么)`
 ```
 
 ```
