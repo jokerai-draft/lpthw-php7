@@ -33,17 +33,17 @@ class YourClass
 
 public class Program
 {
-	public static void Main()
-	{
-		Console.WriteLine("Hello World");
+    public static void Main()
+    {
+        Console.WriteLine("Hello World");
         YourClass x = new YourClass();
         YourClass y = new YourClass();
-		YourClass z = y;
+        YourClass z = y;
         bool b1 = x == y;
         Console.WriteLine(b1 ? "yes" : "no"); // no
-		bool b2 = y == z;
-		Console.WriteLine(b2 ? "yes" : "no"); // yes
-	}
+        bool b2 = y == z;
+        Console.WriteLine(b2 ? "yes" : "no"); // yes
+    }
 }
 ```
 C#中的相等判断：==和equals
