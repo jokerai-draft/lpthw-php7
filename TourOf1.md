@@ -16,7 +16,7 @@ $arr1 = ['morning' => 'sunny', 'afternoon' => 'cloudy', 'evening' => 'rainy', ];
 ```
 - 组合型的数据结构 比如
 ```php
-$arr1 = [
+$dummyEntities = [
     ['id' => 1, 'title' => 'title1', 'body' => 'lorem lisa'],
     ['id' => 2, 'title' => 'title2', 'body' => 'umt asphilt dor'],
 ];
